@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import GameController from './components/GameController';
 import reportWebVitals from './reportWebVitals';
+import '@ta-interaktiv/semantic-ui/semantic/dist/components/reset.css';
+import '@ta-interaktiv/semantic-ui/semantic/dist/components/site.css';
+import './index.css';
+import { Masthead } from '@ta-interaktiv/react-masthead';
+import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className='wrapper'>
+      <Masthead articleId='463616578418'/>
+      <GameController />
+      <Footer />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,15 +1,24 @@
 {
-  "name": "quartett",
-  "version": "0.1.0",
+  "name": "Guetzli-Quartett",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
     "react": "^17.0.1",
+    "react-component-transition": "^1.0.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "react-transition-group": "^4.4.1",
+    "web-vitals": "^0.2.4",
+    "@ta-interaktiv/api-access": "^1.0.2",
+    "@ta-interaktiv/react-masthead": "^6.0.4",
+    "@ta-interaktiv/react-share-buttons": "^4.1.2",
+    "@ta-interaktiv/react-theme-switch": "^2.0.2",
+    "@ta-interaktiv/semantic-ui": "^3.2.0",
+    "@ta-interaktiv/types": "^0.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

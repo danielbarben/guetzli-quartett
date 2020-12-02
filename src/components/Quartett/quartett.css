@@ -1,0 +1,77 @@
+
+/*
+.welcome_screen .ht {
+ 
+}
+*/
+
+
+.headline,.text {
+  font-family: 'IBM Plex Sans', "Helvetica",Arial,sans-serif;
+  font-weight:400;
+  font-size: .9rem;
+}
+
+.cookie {
+  width:150px;
+  margin:5px;
+  text-align:center;
+}
+/*
+.img {
+  width:140px;
+}
+*/
+.cookiename {
+  font-family: 'IBM Plex Sans', "Helvetica",Arial,sans-serif;
+  font-weight:400;
+  font-size: 1.4rem;
+  line-height:2rem;
+  margin:0;
+  padding:0;
+
+}
+.property {
+  text-transform: uppercase;
+  font-size:0.9rem;
+}
+.description {
+  display:flex;
+  flex-flow:column;
+  width: auto;
+  justify-content:space-evenly;
+  font-size:1em;
+  line-height:1em;
+}
+
+.row {
+  display:flex;
+  flex-flow:row;
+  margin-bottom:5px;
+  background:white;
+  width:100%;
+  padding:1px;
+  margin:0;
+  justify-content:space-between;
+  text-align:left;
+  text-decoration:none;
+align-items:center}
+
+
+.button {cursor:pointer}
+.button :hover {background:rgb(144, 206, 144)}
+.choice {background: var(--darkgrey);}
+
+.fields {display:flex;flex-flow:column;}
+.headline {font-weight:700;width:100%;}
+.text {width:100%}
+.arrow {font-size:1.5rem;margin-left:5px}
+
+
+
+.looser {
+  background:var(--darkpink);
+}
+.winner {
+  background: var(--darkgreen);
+}

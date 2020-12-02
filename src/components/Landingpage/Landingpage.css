@@ -1,0 +1,66 @@
+.welcome_screen {
+  position:relative;
+}
+.welcome_screen .ht {
+  margin:50px 5px 25px 5px;
+  font-size:2rem;
+  line-height:2rem;
+
+}
+.welcome_screen .ht b {
+  font-weight:700;
+}
+
+.welcome_screen .ut {
+  font-size:1.4em;
+  line-height:2em;
+}
+
+.welcome_screen .desc {
+  margin-bottom:25px;
+  margin: 0 0 25px 0;
+}
+
+.welcome_screen .start {
+  font-weight:700;
+}
+
+.welcome_screen .startButton, .welcome_screen .instructionsButton {
+  display:block;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin:10px;
+}
+
+.welcome_screen .startButton {
+  background-color: var(--buttongreen);
+}
+
+.welcome_screen .startButton:hover {
+  background-color: var(--buttongreenactive);
+}
+
+.welcome_screen .instructionsButton {
+  background-color:var(--buttongrey);
+}
+
+.welcome_screen .instructionsButton:hover {
+  background-color: var(--buttongreyactive);
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0px 0; }
+  to { background-position: -1632px 0; }
+}
+.cookiebar {
+  height: 100px;
+  background-size: 1632px 80px;
+  background-image: url('../../img/cookiebar.png');
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite;
+}

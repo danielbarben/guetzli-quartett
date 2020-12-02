@@ -1,0 +1,64 @@
+.score {
+  margin-bottom:10px;
+  border-bottom: 1px solid var(--buttongreyactive);
+  border-top: 1px solid var(--buttongreyactive);
+}
+
+.score .number {
+  font-size:1.4em;
+  font-weight:700;
+}
+
+.score p {
+  margin:0 0 10px 0;
+}
+
+.score #message {
+  font-size:1.2em
+}
+
+.invisible {
+  opacity:0
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+  }
+  @keyframes fadeIn {
+  0% {opacity:0}
+  50% {opacity:1}
+  80% {opacity:0.6}
+  100% {opacity:1}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0}
+    50% {opacity:1}
+    80% {opacity:0.6}
+    100% {opacity:1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0}
+    50% {opacity:1}
+    80% {opacity:0.6}
+    100% {opacity:1}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0}
+    50% {opacity:1}
+    80% {opacity:0.6}
+    100% {opacity:1}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0}
+  50% {opacity:1}
+  80% {opacity:0.6}
+  100% {opacity:1}
+  }

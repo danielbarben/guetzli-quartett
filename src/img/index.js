@@ -1,0 +1,18 @@
+import Mailaenderli from './mailaenderli.png'
+import Spitzbub from './spitzbub.png'
+import Brunsli from './brunsli.png'
+import Zimtstern from './zimtstern.png'
+import Baslerlaeckerli from './baslerlaeckerli.png'
+import Zuerchertirggel from './zuerchertirggel.png'
+import Bernerbretzeli from './bernerbretzeli.png'
+import Wygueteli from './wygueteli.png'
+import Biberli from './biberli.png'
+import Kokosmakronen from './kokosmakronen.png'
+import Nussstaengeli from './nussstaengeli.png'
+import Brabanzerl from './brabanzerl.png'
+import Chraebeli from './chraebeli.png'
+import Spekulatius from './spekulatius.png'
+import Vanillekipferl from './vanillekipferl.png'
+import Grassins from './grassins.png'
+
+export default  {Mailaenderli, Spitzbub, Brunsli, Zimtstern, Baslerlaeckerli, Zuerchertirggel, Bernerbretzeli, Wygueteli, Biberli, Kokosmakronen, Nussstaengeli, Brabanzerl, Chraebeli, Spekulatius, Vanillekipferl, Grassins}

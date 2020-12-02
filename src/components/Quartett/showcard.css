@@ -1,0 +1,41 @@
+.card {
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  flex-wrap:wrap;
+  align-items:top;
+  justify-content:space-evenly;
+  height:240px;
+  padding:5px;
+}
+
+.back {
+  margin:10px 0 20px 0;
+  font-size:2em;
+}
+
+.back .backimg {
+  width:300px;
+}
+
+.pink {
+  background:var(--pink);
+}
+.orange {
+  background:var(--orange);
+}
+.green {
+  background:var(--green);
+}
+.yellow {
+  background:var(--yellow)
+}
+.grey {
+  background:var(--grey)
+}
+
+.left {
+  text-align:left;
+  font-size:0.9rem;
+  color: var(--buttongreyactive)
+}
