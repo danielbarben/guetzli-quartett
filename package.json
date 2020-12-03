@@ -4,6 +4,12 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@ta-interaktiv/api-access": "^1.0.2",
+    "@ta-interaktiv/react-masthead": "^6.0.4",
+    "@ta-interaktiv/react-share-buttons": "^4.1.2",
+    "@ta-interaktiv/react-theme-switch": "^2.0.2",
+    "@ta-interaktiv/semantic-ui": "^3.2.0",
+    "@ta-interaktiv/types": "^0.3.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
@@ -12,13 +18,9 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "react-transition-group": "^4.4.1",
-    "web-vitals": "^0.2.4",
-    "@ta-interaktiv/api-access": "^1.0.2",
-    "@ta-interaktiv/react-masthead": "^6.0.4",
-    "@ta-interaktiv/react-share-buttons": "^4.1.2",
-    "@ta-interaktiv/react-theme-switch": "^2.0.2",
-    "@ta-interaktiv/semantic-ui": "^3.2.0",
-    "@ta-interaktiv/types": "^0.3.0"
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.1",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",

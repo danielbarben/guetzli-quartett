@@ -18,20 +18,3 @@ const cards = [
   
 ]
 export default cards
-
-/*
-{'id':'Brunsli','name':'Brunsli', 'features':[1725, 0, 50, 5, 2.5], 'cardproperty':0},
-  {'id':'Zimtstern','name':'Zimtstern', 'features':[1538, 3, 40, 7, 4], 'cardproperty':0},
-  {'id':'Baslerlaeckerli','name':'Basler Läckerli', 'features':[1440, 5, 18, 20, 5], 'cardproperty':1},
-  {'id':'Zuerchertirggel','name':'Zürcher Tirggel', 'features':[1461, 0, 15, 1.5, 3], 'cardproperty':1},
-  {'id':'Bernerbretzeli','name':'Berner Bretzeli', 'features':[1552, 20, 20, 0.75, 2], 'cardproperty':1},
-  {'id':'Wygueteli','name':'Wygueteli', 'features':[1909, 0, 33, 12, 2], 'cardproperty':1},
-  {'id':'Biberli','name':'Biberli', 'features':[1800, 0, 12, 20, 4.5], 'cardproperty':2},
-  {'id':'Kokosmakronen','name':'Kokosmakronen', 'features':[1873, 0, 40, 60, 1], 'cardproperty':2},
-  {'id':'Nussstaengeli','name':'Nussstängeli', 'features':[1780, 0, 33, 15, 3], 'cardproperty':2},
-  {'id':'Brabanzerl','name':'Brabanzerl', 'features':[1978, 32, 10, 10, 4], 'cardproperty':2},
-  {'id':'Chraebeli','name':'Chräbeli', 'features':[1710, 0, 35, 15, 4], 'cardproperty':3},
-  {'id':'Spekulatius','name':'Spekulatius', 'features':[1000, 20, 20, 10, 1.5], 'cardproperty':3},
-  {'id':'Vanillekipferl','name':'Vanillekipferl', 'features':[1150, 28, 15, 15, 3], 'cardproperty':3},
-  {'id':'Grassins','name':'Grassins', 'features':[1905, 30, 19, 15, 1], 'cardproperty':3}
-  */

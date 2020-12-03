@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ComponentTransition, AnimationTypes } from "react-component-transition";
+import { ComponentTransition, AnimationTypes } from 'react-component-transition';
 import Welcome from './Welcome.js'
 import Instructions from './Instructions.js'
 

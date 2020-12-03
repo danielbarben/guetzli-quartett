@@ -3,7 +3,7 @@ import Quartett from '../Quartett'
 import Landingpage from '../Landingpage'
 import Ending from '../Ending'
 import players from '../../const/players.js'
-import { ComponentTransition, AnimationTypes } from "react-component-transition";
+import { ComponentTransition, AnimationTypes } from 'react-component-transition';
 import './GameController.css'; 
 
 class GameController extends Component {

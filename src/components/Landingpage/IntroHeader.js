@@ -9,7 +9,7 @@ class IntroHeader extends Component {
     }
   }
   render () {
-    return <div className={"header " + this.props.player[2]}><div className="ht">Willkommen zum<br/><b>Guetzli-Quartett</b></div><div className="cookiebar"></div></div>
+    return <div className={'header ' + this.props.player[2]}><div className='ht'>Willkommen zum<br/><b>Guetzli-Quartett</b></div><div className='cookiebar'></div></div>
   }
 }
   export default IntroHeader

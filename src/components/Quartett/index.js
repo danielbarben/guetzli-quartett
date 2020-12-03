@@ -26,8 +26,8 @@ class Quartett extends Component {
       }
     }
 
-correction = [-1, -1, -1, 1, 1]
-Arrows = ['↓','↓','↓','↑','↑']
+correction = [-1, -1, -1, -1, 1]
+//Arrows = ['↓','↓','↓','↓','↑']
 
 // Karten mischeln
 shuffle = (a) => {
@@ -35,7 +35,6 @@ shuffle = (a) => {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
   }
-  console.log('shuffled')
   return a;
 }
 
@@ -87,13 +86,13 @@ next = () => {
   
   else if (this.state.userWins) {
     //Tauschkarte
-    let tmp = this.state.usersCards[0]
-    //beim user wegnehmen, beim Computer hinzufügen
-    let newComputer = this.state.computersCards.slice()
-    newComputer.push(tmp)
-    this.shuffle(newComputer)
+    let tmp = this.state.computersCards[0]
     let newUser = this.state.usersCards.slice()
-    newUser.shift()
+    newUser.push(tmp)
+    this.shuffle(newUser)
+    //beim computer wegnehmen, beim user hinzufügen
+    let newComputer = this.state.computersCards.slice()
+    newComputer.shift()
     this.setState({
       usersCards: newUser,
       computersCards: newComputer
@@ -102,28 +101,24 @@ next = () => {
   else {
     //computer wins
     //Tauschkarte
-    let tmp = this.state.computersCards[0]
+    let tmp = this.state.usersCards[0]
+    let newComputer = this.state.computersCards.slice()
+    newComputer.push(tmp)
+    this.shuffle(newComputer)
     //beim compuer wegnehmen, beim Computer hinzufügen
     let newUser = this.state.usersCards.slice()
-    newUser.push(tmp)
-    this.shuffle(newUser)
-    let newComputer = this.state.computersCards.slice()
-    newComputer.shift()
+    newUser.shift() 
     this.setState({
       usersCards: newUser,
       computersCards: newComputer
     })
   }
   
-
-
   setTimeout(() => this.setState({
     showUserCard: true,
     clickable:true
   }), 1000);
 }
-
-// HIER WEITERFAHREN
   else {this.props.ending(this.state.winner)}
 }
 
@@ -143,21 +138,20 @@ compare = (choice) => {
   //user gewinnt
   if (usersValue > computersValue) {
     //letzte Karte?
-    if (this.state.usersCards.length === 1) {
+    if (this.state.computersCards.length === 1) {
       this.setState({winner:'user'})
-      console.log('user gewinnt')
     }
     this.setState({
       message: messages['youwin'],
       userWins:true
     })
   }
+
   //computer gewinnt
   else if (usersValue < computersValue) {
     //letzte Karte
-    if (this.state.computersCards.length === 1) {
+    if (this.state.usersCards.length === 1) {
       this.setState({winner:'computer'})
-      console.log('computer gewinnt')
     }
     this.setState({
       message:this.props.player[0] + messages['computerwins'], 

@@ -2,9 +2,9 @@
   position:relative;
 }
 .welcome_screen .ht {
-  margin:50px 5px 25px 5px;
+  margin:10px 5px 30px 5px;
   font-size:2rem;
-  line-height:2rem;
+  line-height:2.2rem;
 
 }
 .welcome_screen .ht b {
@@ -18,7 +18,7 @@
 
 .welcome_screen .desc {
   margin-bottom:25px;
-  margin: 0 0 25px 0;
+  margin: 0 5px 25px 5px;
 }
 
 .welcome_screen .start {

@@ -5,8 +5,6 @@ class Score extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //messagechange:0
-
       }
     }
 
@@ -19,10 +17,9 @@ class Score extends Component {
   render() {
   
   return (
-
     <div className='score'>
       <p>Du <span className='number'>{this.props.playerscore} : {this.props.computerscore}</span> {this.props.player[0]}</p>
-      <p id="message">{this.props.message}</p>    
+      <p id='message'>{this.props.message}</p>    
     </div>  
 
   );}
