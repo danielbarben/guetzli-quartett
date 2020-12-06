@@ -34,7 +34,7 @@ class GameController extends Component {
 
   componentDidMount = () => {
     let dice = Math.floor((Math.random() * 4));
-    let newPlayer = [players[dice].name,players[dice].responsability,players[dice].color]
+    let newPlayer = [players[dice].name, players[dice].responsability, players[dice].color, players[dice].pronoun]
     this.setState({
       player:newPlayer
     })

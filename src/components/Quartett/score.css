@@ -1,20 +1,30 @@
-.score {
+.scorebar {
   margin-bottom:10px;
   border-bottom: 1px solid var(--buttongreyactive);
   border-top: 1px solid var(--buttongreyactive);
+  margin: 5px 0 5px 0;
 }
 
-.score .number {
+.scorebar .number {
   font-size:1.4em;
   font-weight:700;
 }
 
-.score p {
+.scorebar p {
   margin:0 0 10px 0;
 }
 
-.score #message {
-  font-size:1.1em
+.scorebar #score {
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.scorebar #message {
+  margin-top:0;
+  margin-bottom:5px;
+  font-size:1rem;
+  line-height:1.2rem;
+
 }
 
 .invisible {

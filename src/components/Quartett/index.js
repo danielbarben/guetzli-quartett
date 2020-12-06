@@ -26,7 +26,8 @@ class Quartett extends Component {
       }
     }
 
-correction = [-1, -1, -1, -1, 1]
+correction = [-1, -1, -1, -1, -1]
+compareText = [' wurde früher erwähnt ', ' hat weniger Butter ', ' hat weniger Zucker ', ' hat eine kürzere Backzeit ', 'ist weniger schwierig ']
 //Arrows = ['↓','↓','↓','↓','↑']
 
 // Karten mischeln
@@ -54,9 +55,8 @@ verteilen = () => {
     computersCards: newComputer,
     message:messages.shuffling
   })
-  setTimeout(() => this.setState({message:messages.start,showUserCard: true}), 1000);
+  setTimeout(() => this.setState({message:messages.start + this.props.player[0] + '\'s Guetzli.',showUserCard: true}), 1000);
 }
-
 
 next = () => {
   //Nextclick verbieten
@@ -70,7 +70,6 @@ next = () => {
     message:messages['next']
   })
   if (!this.state.winner) {
-    
 
   if (this.state.userWins && this.state.computerWins) {
     //unentschieden
@@ -83,7 +82,7 @@ next = () => {
       computersCards: newComputer
     })
   }
-  
+  // unser wins
   else if (this.state.userWins) {
     //Tauschkarte
     let tmp = this.state.computersCards[0]
@@ -141,8 +140,10 @@ compare = (choice) => {
     if (this.state.computersCards.length === 1) {
       this.setState({winner:'user'})
     }
+    console.log(this.state.choice)
     this.setState({
-      message: messages['youwin'],
+      message: 'Du gewinnst diese Runde. ' + cards[this.state.usersCards[0]].pronoun + ' ' + cards[this.state.usersCards[0]].name + ' ' + this.compareText[choice] + ' als ' + this.props.player[0] + '\'s ' + cards[this.state.computersCards[0]].name + '. ' + messages['wait'],
+      //message: messages['youwin'],
       userWins:true
     })
   }
@@ -154,18 +155,17 @@ compare = (choice) => {
       this.setState({winner:'computer'})
     }
     this.setState({
-      message:this.props.player[0] + messages['computerwins'], 
+      message: this.props.player[0] + ' gewinnt diese Runde. ' + this.props.player[3] + ' ' + cards[this.state.computersCards[0]].name + ' ' + this.compareText[choice] + ' als ' + cards[this.state.usersCards[0]].pronoun + ' ' + cards[this.state.usersCards[0]].name + '. ' + messages['wait'],
       computerWins:true
     })
   }
   else {
     this.setState({
-      message: messages['drawn'],
+      message: 'Unentschieden! ' + cards[this.state.usersCards[0]].name + ' und ' + cards[this.state.computersCards[0]].name + ' sind sich ebenbürtig. ' + messages['wait'],
       computerWins:true,
       userWins:true
     })
   }
-
 }
 
 componentDidMount() {
@@ -175,9 +175,9 @@ this.verteilen();
 render() {
   return <div>
     <ShowCard visibility={this.state.showComputerCard} nextclick={false} next={this.next} cookie={cards[this.state.computersCards[0]]} clickable={false} categories={categories} compare={false} choice={this.state.choice} color={this.state.computerWins ? 'winner' : 'looser'}/>
-    <div className='left'>{this.props.player[0]}'s Karte</div>
+    <div className='left'>{this.props.player[0]}'s Guetzli</div>
     <Score playerscore={this.state.usersCards.length} player={this.props.player} computerscore={this.state.computersCards.length} message={this.state.message} messagechange={this.state.messagechange}/>
-    <div className='left'>Deine Karte</div>
+    <div className='left'>Deine Guetzli</div>
     <ShowCard visibility={this.state.showUserCard} nextclick={this.state.nextclick} next={this.next} cookie={cards[this.state.usersCards[0]]} clickable={this.state.clickable} categories={categories} compare={this.compare} choice={this.state.choice} color={this.state.userWins ? 'winner' : 'looser'}/>
     </div>
   }

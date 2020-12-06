@@ -17,13 +17,11 @@ class Score extends Component {
   render() {
   
   return (
-    <div className='score'>
-      <p>Du <span className='number'>{this.props.playerscore} : {this.props.computerscore}</span> {this.props.player[0]}</p>
+    <div className='scorebar'>
+      <p id='score'>Du <span className='number'><span className={this.props.playerscore < this.props.computerscore ? 'loosertext' : 'winnertext'}>{this.props.playerscore}</span> : <span className={this.props.computerscore < this.props.playerscore ? 'loosertext' : 'winnertext'}>{this.props.computerscore}</span></span> {this.props.player[0]}</p>
       <p id='message'>{this.props.message}</p>    
     </div>  
-
   );}
-
 }
 
 export default Score;

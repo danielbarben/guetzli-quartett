@@ -1,5 +1,5 @@
 .headline,.text {
-  font-family: 'IBM Plex Sans', "Helvetica",Arial,sans-serif;
+  font-family: 'IBM Plex Sans', 'Helvetica',Arial,sans-serif;
   font-weight:400;
   font-size: .9rem;
 }
@@ -11,7 +11,7 @@
 }
 
 .cookiename {
-  font-family: 'IBM Plex Sans', "Helvetica",Arial,sans-serif;
+  font-family: 'IBM Plex Sans', 'Helvetica',Arial,sans-serif;
   font-weight:400;
   font-size: 1.4rem;
   line-height:2rem;
@@ -50,7 +50,7 @@ align-items:center}
   cursor:pointer
 }
 .button :hover {
-  background:var(--darkgreen)
+  background:var(--darkgrey)
 }
 .choice {background: var(--darkgrey);}
 
@@ -66,4 +66,13 @@ align-items:center}
 }
 .winner {
   background: var(--darkgreen);
+}
+
+
+
+.loosertext {
+  color:var(--darkpink);
+}
+.winnertext {
+  color: var(--darkgreen);
 }

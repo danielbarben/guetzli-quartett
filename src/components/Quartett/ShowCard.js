@@ -15,7 +15,7 @@ class ShowCard extends Component {
       }
     }
     Units = ['','g','g','min','']
-    Arrows = [<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret up' size='small' />]
+    Arrows = [<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />]
     //Arrows = ['↓','↓','↓','↑','↑']
     Cardproperties = ['Klassiker', 'Regionale', 'Nüsse', 'Exoten']
     Cardcolor = ['pink', 'orange', 'green', 'yellow']
