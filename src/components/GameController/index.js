@@ -21,15 +21,7 @@ class GameController extends Component {
   }
 
   ending = (winner) => {
-    if (winner === 'user') {
-      this.setState({winner:true,gameStat:'ending'})
-      console.log('user wins')
-    } 
-    else {
-      this.setState({winner:false,gameStat:'ending'})
-      console.log('computer wins')
-
-    }
+    winner === 'user' ? this.setState({winner:true,gameStat:'ending'}) :this.setState({winner:false,gameStat:'ending'})
   }
 
   componentDidMount = () => {

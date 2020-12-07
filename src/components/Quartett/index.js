@@ -55,7 +55,9 @@ verteilen = () => {
     computersCards: newComputer,
     message:messages.shuffling
   })
-  setTimeout(() => this.setState({message:messages.start + this.props.player[0] + '\'s Guetzli.',showUserCard: true}), 1000);
+  setTimeout(() => this.setState({
+    message:messages.start + this.props.player[0] + '\'s Guetzli.',showUserCard: true}
+    ), 1000);
 }
 
 next = () => {
@@ -70,55 +72,55 @@ next = () => {
     message:messages['next']
   })
   if (!this.state.winner) {
-
-  if (this.state.userWins && this.state.computerWins) {
-    //unentschieden
-    let newUser = this.state.usersCards.slice()
-    let newComputer = this.state.computersCards.slice()
-    this.shuffle(newUser)
-    this.shuffle(newComputer)
-    this.setState({
-      usersCards: newUser,
-      computersCards: newComputer
-    })
-  }
-  // unser wins
-  else if (this.state.userWins) {
-    //Tauschkarte
-    let tmp = this.state.computersCards[0]
-    let newUser = this.state.usersCards.slice()
-    newUser.push(tmp)
-    this.shuffle(newUser)
-    //beim computer wegnehmen, beim user hinzufügen
-    let newComputer = this.state.computersCards.slice()
-    newComputer.shift()
-    this.setState({
-      usersCards: newUser,
-      computersCards: newComputer
-    })
-  }
-  else {
-    //computer wins
-    //Tauschkarte
-    let tmp = this.state.usersCards[0]
-    let newComputer = this.state.computersCards.slice()
-    newComputer.push(tmp)
-    this.shuffle(newComputer)
-    //beim compuer wegnehmen, beim Computer hinzufügen
-    let newUser = this.state.usersCards.slice()
-    newUser.shift() 
-    this.setState({
-      usersCards: newUser,
-      computersCards: newComputer
-    })
-  }
-  
+    if (this.state.userWins && this.state.computerWins) {
+      //unentschieden
+      let newUser = this.state.usersCards.slice()
+      let newComputer = this.state.computersCards.slice()
+      this.shuffle(newUser)
+      this.shuffle(newComputer)
+      this.setState({
+        usersCards: newUser,
+        computersCards: newComputer
+      })
+    }
+    // unser wins
+    else if (this.state.userWins) {
+      //Tauschkarte
+      let tmp = this.state.computersCards[0]
+      let newUser = this.state.usersCards.slice()
+      newUser.push(tmp)
+      this.shuffle(newUser)
+      //beim computer wegnehmen, beim user hinzufügen
+      let newComputer = this.state.computersCards.slice()
+      newComputer.shift()
+      this.setState({
+        usersCards: newUser,
+        computersCards: newComputer
+       })
+     }
+    else {
+      //computer wins
+      //Tauschkarte
+      let tmp = this.state.usersCards[0]
+      let newComputer = this.state.computersCards.slice()
+      newComputer.push(tmp)
+      this.shuffle(newComputer)
+      //beim compuer wegnehmen, beim Computer hinzufügen
+      let newUser = this.state.usersCards.slice()
+      newUser.shift() 
+      this.setState({
+        usersCards: newUser,
+        computersCards: newComputer
+      })
+     }
   setTimeout(() => this.setState({
     showUserCard: true,
     clickable:true
   }), 1000);
 }
-  else {this.props.ending(this.state.winner)}
+  else {
+    this.props.ending(this.state.winner)
+  }
 }
 
 compare = (choice) => {
@@ -138,12 +140,13 @@ compare = (choice) => {
   if (usersValue > computersValue) {
     //letzte Karte?
     if (this.state.computersCards.length === 1) {
-      this.setState({winner:'user'})
+      this.setState({
+        winner:'user'
+      })
     }
-    console.log(this.state.choice)
+    //console.log(this.state.choice)
     this.setState({
-      message: 'Du gewinnst diese Runde. ' + cards[this.state.usersCards[0]].pronoun + ' ' + cards[this.state.usersCards[0]].name + ' ' + this.compareText[choice] + ' als ' + this.props.player[0] + '\'s ' + cards[this.state.computersCards[0]].name + '. ' + messages['wait'],
-      //message: messages['youwin'],
+      message: `Du gewinnst diese Runde. Dein${cards[this.state.usersCards[0]].gender} ${cards[this.state.usersCards[0]].name} ${this.compareText[choice]} als ${this.props.player[0]}\'s ${cards[this.state.computersCards[0]].name}. ${messages['wait']}`,
       userWins:true
     })
   }
@@ -152,16 +155,18 @@ compare = (choice) => {
   else if (usersValue < computersValue) {
     //letzte Karte
     if (this.state.usersCards.length === 1) {
-      this.setState({winner:'computer'})
+      this.setState({
+        winner:'computer'
+      })
     }
     this.setState({
-      message: this.props.player[0] + ' gewinnt diese Runde. ' + this.props.player[3] + ' ' + cards[this.state.computersCards[0]].name + ' ' + this.compareText[choice] + ' als ' + cards[this.state.usersCards[0]].pronoun + ' ' + cards[this.state.usersCards[0]].name + '. ' + messages['wait'],
+      message: `${this.props.player[0]} gewinnt diese Runde. ${this.props.player[3]}${cards[this.state.usersCards[0]].gender} ${cards[this.state.computersCards[0]].name} ${this.compareText[choice]} als Dein ${cards[this.state.usersCards[0]].gender} ${cards[this.state.usersCards[0]].name}. ${messages['wait']}`,
       computerWins:true
     })
   }
   else {
     this.setState({
-      message: 'Unentschieden! ' + cards[this.state.usersCards[0]].name + ' und ' + cards[this.state.computersCards[0]].name + ' sind sich ebenbürtig. ' + messages['wait'],
+      message: `Unentschieden! ${cards[this.state.usersCards[0]].name} und ${cards[this.state.computersCards[0]].name} sind sich in dieser Beziehung ebenbürtig. ${messages['wait']}`,
       computerWins:true,
       userWins:true
     })
