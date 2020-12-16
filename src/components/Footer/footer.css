@@ -1,8 +1,22 @@
 .footer {
-  font-size:0.8rem;
+  font-size:0.9rem;
+  line-height:1.1rem;
   text-align:left;
-  margin-top:20px;
+  margin-top:80px;
+  padding: 0 5px 0 5px;
 }
 .footer p {
-  margin:0 5px 0 5px
+  margin:0 5px 10px 5px
+}
+
+.work {
+  font-weight:700;
+  min-width:160px;
+  padding:20px 0 0 0;
+  vertical-align:top;
+}
+.name {
+  min-width:200px;
+  padding:20px 0 0 0;
+  vertical-align:top;
 }

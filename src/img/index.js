@@ -14,5 +14,5 @@ import Chraebeli from './chraebeli.png'
 import Spekulatius from './spekulatius.png'
 import Vanillekipferl from './vanillekipferl.png'
 import Grassins from './grassins.png'
-
-export default {Mailaenderli, Spitzbub, Brunsli, Zimtstern, Baslerlaeckerli, Zuerchertirggel, Bernerbretzeli, Wygueteli, Biberli, Kokosmakronen, Nussstaengeli, Brabanzerl, Chraebeli, Spekulatius, Vanillekipferl, Grassins}
+let img = {Mailaenderli, Spitzbub, Brunsli, Zimtstern, Baslerlaeckerli, Zuerchertirggel, Bernerbretzeli, Wygueteli, Biberli, Kokosmakronen, Nussstaengeli, Brabanzerl, Chraebeli, Spekulatius, Vanillekipferl, Grassins}
+export default img

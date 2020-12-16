@@ -15,9 +15,8 @@ class ShowCard extends Component {
       }
     }
     Units = ['','g','g','min','']
-    Arrows = [<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />,<Icon name='caret down' size='small' />]
-    //Arrows = ['↓','↓','↓','↑','↑']
-    Cardproperties = ['Klassiker', 'Regionale', 'Nüsse', 'Exoten']
+    Arrows = [<Icon name='arrow down' size='tiny' />,<Icon name='arrow up' size='tiny' />,<Icon name='arrow up' size='tiny' />,<Icon name='arrow down' size='tiny' />,<Icon name='arrow up' size='tiny' />]
+    Cardproperties = ['Klassiker', 'Regionale', 'Nussig', 'Exoten']
     Cardcolor = ['pink', 'orange', 'green', 'yellow']
 
     imageNames = {
@@ -45,22 +44,22 @@ class ShowCard extends Component {
     if (this.props.visibility) {
       switch (this.props.cookie.features[4]) {
         case 1:
-          points = <div><Icon name='circle' size='small' /><span class="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
+          points = <div><Icon name='circle' size='small' /><span className="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
           break;
         case 1.5:
-            points = <div><Icon name='circle' size='small' /><Icon name='circle outline' size='small' /><span class="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
+            points = <div><Icon name='circle' size='small' /><Icon name='circle outline' size='small' /><span className="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
             break;
         case 2:
-          points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><span class="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
+          points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><span className="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
           break;
         case 2.5:
-            points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle outline' size='small' /><span class="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
+            points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle outline' size='small' /><span className="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
             break;
         case 3:
-          points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><span class="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
+          points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><span className="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
           break;
         case 4:
-          points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><span class="greybullet"><Icon name='circle' size='small' /></span></div>
+          points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><span className="greybullet"><Icon name='circle' size='small' /></span></div>
           break;
         case 4.5:
           points = <div><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle outline' size='small' /></div>
@@ -70,7 +69,7 @@ class ShowCard extends Component {
             break;
         
         default:
-          console.log(`Sorry.`);
+          points = <div><span className="greybullet"><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /><Icon name='circle' size='small' /></span></div>
       }
          
       description = this.props.categories.map((q,i) => {

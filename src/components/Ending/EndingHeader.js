@@ -9,7 +9,7 @@ class EndingHeader extends Component {
     }
   }
   render () {
-    return <div className={'header ' + this.props.player[2]}>{this.props.winner ? <div className='ht'>Gratuliere,<br/><b>Du hast gewonnen!</b></div> : <div className='ht'>Hoppla,<br/><b>ich habe gewonnen!</b></div>}<div className='cookiebar'></div></div>
+    return <div className={'header ' + this.props.player[2]}>{this.props.winner ? <div className='ht'>Gratuliere,<br/><b>du hast gewonnen!</b></div> : <div className='ht'>Hoppla,<br/><b>ich habe gewonnen!</b></div>}<div className='cookiebar'></div></div>
   }
 }
   export default EndingHeader

@@ -5,13 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import '@ta-interaktiv/semantic-ui/semantic/dist/components/reset.css';
 import '@ta-interaktiv/semantic-ui/semantic/dist/components/site.css';
 import './index.css';
-import { Masthead } from '@ta-interaktiv/react-masthead';
 import Footer from './components/Footer';
+import { Masthead } from '@ta-interaktiv/react-masthead';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <div className='wrapper'>
-      <Masthead articleId='463616578418'/>
+      <Masthead articleId='503062468265'/>
       <GameController />
       <Footer />
     </div>

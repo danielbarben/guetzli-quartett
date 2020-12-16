@@ -1,7 +1,7 @@
 .headline,.text {
   font-family: 'IBM Plex Sans', 'Helvetica',Arial,sans-serif;
   font-weight:400;
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 .cookie {
@@ -13,11 +13,10 @@
 .cookiename {
   font-family: 'IBM Plex Sans', 'Helvetica',Arial,sans-serif;
   font-weight:400;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height:2rem;
   margin:0;
   padding:0;
-
 }
 .property {
   text-transform: uppercase;
@@ -28,10 +27,9 @@
   flex-flow:column;
   width: auto;
   justify-content:space-evenly;
-  font-size:1em;
+  font-size:0.96em;
   line-height:1em;
 }
-
 .row {
   display:flex;
   flex-flow:row;
@@ -39,13 +37,11 @@
   background:white;
   width:100%;
   padding:1px;
-  margin:0;
   justify-content:space-between;
   text-align:left;
   text-decoration:none;
-align-items:center}
-
-
+align-items:center
+}
 .button {
   cursor:pointer
 }
@@ -53,26 +49,43 @@ align-items:center}
   background:var(--darkgrey)
 }
 .choice {background: var(--darkgrey);}
-
 .fields {display:flex;flex-flow:column;}
 .headline {font-weight:700;width:100%;}
 .text {width:100%}
 .arrow {font-size:1.5rem;margin-left:5px}
-
-
-
 .looser {
   background:var(--darkpink);
 }
 .winner {
   background: var(--darkgreen);
 }
-
-
-
 .loosertext {
   color:var(--darkpink);
 }
 .winnertext {
   color: var(--darkgreen);
+}
+
+@media only screen and (max-width: 350px) {
+  .headline,.text {
+    font-size: .7rem;
+  }
+  
+  .cookie {
+    width:100px;
+    }
+  
+  .cookiename {
+    font-size: 1rem;
+ }
+  .property {
+    font-size:0.7rem;
+  }
+  .description {
+    font-size:.9em;
+    line-height:.9em;
+  }
+  .row {
+    margin-bottom:2px;
+    }
 }

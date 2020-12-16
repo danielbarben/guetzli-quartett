@@ -1,8 +1,7 @@
 .scorebar {
-  margin-bottom:10px;
   border-bottom: 1px solid var(--buttongreyactive);
   border-top: 1px solid var(--buttongreyactive);
-  margin: 5px 0 5px 0;
+  margin: 5px 5px 10px 5px;
 }
 
 .scorebar .number {

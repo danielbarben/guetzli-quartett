@@ -9,9 +9,9 @@ class Score extends Component {
     }
 
   componentDidUpdate = () => {
-    let test = document.getElementById('message')
-    test.className='invisible';
-    setTimeout(() => test.className='fade-in', 200);
+    let effect = document.getElementById('message')
+    effect.className='invisible';
+    setTimeout(() => effect.className='fade-in', 200);
   }
 
   render() {
